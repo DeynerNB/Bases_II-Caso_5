@@ -1,0 +1,78 @@
+################################################################################################################
+##Crear la imagen que está en el folder docker de dbt
+docker build --tag dbt --no-cache --target dbt-sqlserver --build-arg dbt_sqlserver_ref .
+
+
+##correr el server apuntando a la carpeta donde se va iniciar el python environment de trabajo para dbt
+## con esto el image está listo para crear en env de python dentro de /usr/app, donde va a crear un folder dbt que es el ambiente donde creo mis proyectos
+## el image está listo para correr con root, dbt por default maneja el archivo de configuración en el home del user en un folder hiden .dbt
+docker run -t -d -p 8090:8080 --network=disponet --name dbtserver --mount type=bind,source="C:\dev\cursostec\bases II\dbt\dbtworkspace",target=/usr/app --mount type=bind,source="C:\dev\cursostec\bases II\dbt\dbtworkspace",target=/root/.dbt/ dbt
+
+
+## ingreso al batch para inicializar mi proyecto
+docker exec -it dbtserver /bin/bash
+
+## chequear que la paquetería sea la versión que queremos usar
+dbt --version
+
+## creamos el patcher, podemos crear K patchers, esto es el programa donde se configura
+## entradas, salidas, transformaciones y cargas
+## le pongo fedaracion porque el ejemplo lo voy a usar de la federacion unida de planetas, viene de viaje a las estrellas
+## creando el proyecto con el nombre "federation"
+dbt init federacion
+
+## el archivo de profiles ya va estar mapeando al /root/.dbt/profiles.yml 
+## configurar el file debidamente y testearlo , para ello ubicarse en el folder donde
+## se encuentra su dbt_project.yml y ejecutar
+## asumiendo que el profile section se llama default
+
+dbt debug --profile federation
+
+## now lets create a database and then a table with data already loaded from the EL process
+
+CREATE TABLE [dbo].[uss_ships](
+	[recordtime] [datetime] NOT NULL,
+	[ship] [varchar](150) NOT NULL,
+	[capacity] [int] NOT NULL,
+	[weapons] [varchar](150) NOT NULL
+) ON [PRIMARY]
+GO
+
+INSERT INTO dbo.uss_ships (recordtime, ship, capacity, weapons)
+VALUES 
+('2123-05-07 00:00:00', 'NCC-1701: USS Enterprise', 120, 'phasers:2,torpedoes:10'),
+('2160-02-03 00:00:00', 'KCK-2000: Klingon Bird-of-Prey', 80, 'phasers:1,disruptors:5'),
+('2125-01-02 00:00:00', 'RML-2033-A: Romulan Warbird', 115, 'phasers:10,plasma torpedoes:10'),
+('2190-02-07 00:00:00', 'NCC-1701-B: USS Enterprise', 150, 'phasers:3,torpedoes:20'),
+('2224-05-07 00:00:00', 'NCC-1701-C: USS Enterprise', 280, 'phasers:5,torpedoes:40')
+GO
+
+
+# cree los sources en el yml y el modelo en el sql
+
+dbt compile
+dbt run
+dbt test
+
+#dbt packages
+
+include the package in the packages.yml file
+
+dbt deps
+
+
+se quiere crear una transformación basados en la tabla uss_ships, 
+el cual deberá seguir el siguiente schema:
+
+schema: 
+	- starships (shipid, creationdate, posttime, name, capacity)
+	- weapons (weaponid, shipid, weapontype, quantity)
+
+Note que no se desea tener una tabla de weaponstypes y la intermedia para hacer las relaciones, esto 
+porque bajo el contexto de análisis de datos, es conveniente reducir relaciones y duplicar información para
+facilitar las operaciones de análisis posterior. 
+
+1. Extraer la data de uss_ships e insertar lo necesario en starships con un id auto incremental
+
+2. crear la tabla de weapons relacionada con la de ships teniendo el weapontype y la cantidad como campos separados
+

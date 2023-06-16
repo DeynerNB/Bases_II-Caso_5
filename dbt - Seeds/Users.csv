@@ -1,0 +1,21 @@
+id,firstName,lastName,email,password,roleTypesId,realm,username,emailVerified,verificationToken,isDeleted,telephone,languagesId,isActive,sex,createdBy,createdAt,updatedBy,updatedAt,deletionJustification
+1,"Super Administrador",(SA),superadministrador@itcr.ac.cr,$2a$10$2IlK0zzcqxwH2v3/qaXTOe0sSuEf/4RSgTCH7NvCXEG5dx7NNjfkK,1,super,superadministrador@itcr.ac.cr,1,NULL,0,25252525,1,1,0,NULL,NULL,NULL,NULL,NULL
+2,Catalina,Espinach,cespinach@itcr.ac.cr,$2a$10$cKc0JtEBaY3ECtRirjVeceMb1oaCl6AVMOhKY0L8.ItJ68zMuMUrq,2,,cespinach@itcr.ac.cr,0,,0,70137180,1,1,1,1,"2020-03-29 21:31:53",1,"2020-03-30 14:12:29",NULL
+3,Víctor,"Romero Chacón",vjrch451@gmail.com,$2a$10$mrRUAJG.5w0gS2usnnjcjubpYFc3vVwbGtid9cDUd6AtBXkotq4oW,2,,vjrch451@gmail.com,0,,0,+50671696634,1,1,0,1,"2020-04-06 21:40:48",1,NULL,NULL
+4,Jonathan,"Rodriguez Gonzales",jonastu.9@gmail.com,$2a$10$YIT9voU7ZZNAM4.3xagCpucXHmrtsRl76v47kGK0hq0QddRMiQjv6,2,,jonastu.9@gmail.com,0,,0,+50683914923,1,0,0,1,"2020-04-06 21:52:53",1,"2020-05-19 16:43:56",NULL
+6,Dennis,"Solís Solano",dennissolis28@gmail.com,$2a$10$LcocJMZxnf9KAtAXPvzch.I5BbqcYrY6S2THOZjjRJZUF8F6T.lc2,3,,dennissolis28@gmail.com,1,,0,88052781,1,1,0,1,"2020-04-06 22:52:18",6,"2022-07-21 14:23:31",NULL
+7,"Ana Gabriela",Madrigal,agmadrigal@itcr.ac.cr,$2a$10$cKc0JtEBaY3ECtRirjVeceMb1oaCl6AVMOhKY0L8.ItJ68zMuMUrq,2,,agmadrigal@itcr.ac.cr,0,,0,"+506 25509387",1,1,1,1,"2020-04-07 14:45:02",1,NULL,NULL
+8,"Jose Andres",Lizano,jalgsg2@gmail.com,$2a$10$cKc0JtEBaY3ECtRirjVeceMb1oaCl6AVMOhKY0L8.ItJ68zMuMUrq,1,,jalgsg2@gmail.com,0,,0,88878792,1,1,0,1,"2020-05-08 20:57:12",1,"2020-05-19 16:43:20",NULL
+11,Marcello,Calvo,marcello_calvo@hotmail.com,$2a$10$5NiKZr7ld4p6flIwx3OKfeQfx9gTv0tKKJOZHuDomSt4Lv8P9,3,,marcello_calvo@hotmail.com,1,,0,87239843,1,0,0,1,"2020-05-19 17:44:26",1,"2021-03-22 16:44:31",NULL
+12,Marcello,"Calvo Zamora",mchellocz@gmail.com,$2a$10$5NiKZr7ld4p6flIwx3OKfeQfx9gTv0tKKJOZHuDomSt4Lv8P9.NJa,2,,mchellocz@gmail.com,0,,0,83176758,1,1,0,1,"2020-05-19 20:54:17",1,"2020-05-19 20:54:35",NULL
+16,Mario,"Chacón Rivas (TEC)",machacon@itcr.ac.cr,$2a$10$VN/UoGI1zDzORGLlA5KXAOtAZTssH.qu45Zaams2JLG21opeMXPcS,1,,machacon@itcr.ac.cr,0,,0,83901475,1,1,0,1,"2020-09-01 17:27:31",1,NULL,NULL
+17,Wilmer,Rodriguez,wilmer8981@hotmail.com,$2a$10$lYfF4ipQEJR6yS7Ux1nN1eoTrccFj0j5HqNe.MhgqbdIULO65nOHa,3,,wilmer8981@hotmail.com,1,,0,88888888,1,1,0,12,"2020-12-11 15:12:09",12,"2022-07-20 23:41:18",NULL
+18,Helena,Matarrita,elenamatarrita69@gmail.com,$2a$10$6uyba4uj1259osCoCKCqO.t9Ji05s2IY9T6jUptb1t0wNUtekcdiC,3,,elenamatarrita69@gmail.com,1,,0,88888888,1,1,1,12,"2020-12-11 15:14:34",12,"2021-02-08 01:29:36",NULL
+19,Inclutec,,inclutec.notifications@gmail.com,$2a$10$ElJdqQZoCoaLvcvOon4Wnut7ZI7sHZIiNe4hvQA8pt2D20YKumIKW,4,,inclutec.notifications@gmail.com,0,,0,25505050,1,1,2,12,"2020-12-18 14:48:30",2,"2021-02-25 15:46:10",NULL
+20,"Observatorio de Tecnologías Accesibles e Inclusivas OTAI",,otai@itcr.ac.cr,$2a$10$fnJ5alPE2nizND7LQ1WeKOT.yx4z2TSAQ/YuajCyxQNpzw7ptFotK,4,,otai@itcr.ac.cr,0,,0,2250-9254,1,1,2,2,"2021-02-26 21:27:34",NULL,NULL,NULL
+24,"Luis ","Badilla Godínez ",abadillagodinez@gmail.com,$2a$10$MOVv5noRZaq.MScN/.IxAOVc8m2gtDNgHvG.M9h8a2x4BD5VgBAzy,1,,abadillagodinez@gmail.com,0,,0,25509254,1,1,0,1,"2021-03-22 21:45:48",NULL,"2021-03-22 22:22:08",NULL
+25,Erick,Salazar,ericksalazar_g@hotmail.com,$2a$10$P.GVNihCMKvX5yYRwoxhRuVQmWL59bEBwe210791.ZWIRfH80tUR6,3,,ericksalazar_g@hotmail.com,1,,0,25509254,1,0,0,1,"2021-03-22 21:47:35",1,"2021-09-09 21:40:27",NULL
+26,"Mauricio ","Quirós Bravo",mqbravo@gmail.com,$2a$10$SYx3wJzEYbjLOwiofkD.kelGz4Q0IFNsDFRta3.yf7.3HAI0vD3k6,2,,mqbravo@gmail.com,0,,0,25509254,1,1,0,1,"2021-03-22 21:51:05",NULL,"2021-03-22 22:25:50",NULL
+27,Lery,"Sanchez Calderon",ljazminsc205@gmail.com,$2a$10$cKc0JtEBaY3ECtRirjVeceMb1oaCl6AVMOhKY0L8.ItJ68zMuMUrq,2,,ljazminsc205@gmail.com,0,,0,87775109,1,1,1,1,"2021-08-13 13:46:52",27,"2021-08-17 19:28:12",NULL
+28,"Dirección General de Servicio Civil ",,aledezma@dgsc.go.cr,$2a$10$cKc0JtEBaY3ECtRirjVeceMb1oaCl6AVMOhKY0L8.ItJ68zMuMUrq,4,,aledezma@dgsc.go.cr,0,,0,25868324,1,1,2,7,"2021-08-26 21:10:54",7,"2021-08-26 21:11:42",NULL
+29,"Popular Pensiones ",,popularpensiones@bp.fi.cr,$2a$10$9PNKlKk43dO/tgPqJRcJcOvqWuvee/C9sWzK/5n/0k7U9YzI62Yqm,4,,popularpensiones@bp.fi.cr,0,,0,20100300,1,1,2,7,"2021-10-04 15:53:55",NULL,NULL,NULL
