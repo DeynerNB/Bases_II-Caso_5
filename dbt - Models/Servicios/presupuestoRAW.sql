@@ -1,3 +1,3 @@
 {{ config(schema = 'RAW',materialized= 'view') }}
 
-select Anio,Presupuesto FROM {{ source('Services','Presupuesto_anual_COSEVI')}}
+select Anio,Presupuesto, Costo FROM {{ source('Services','Presupuesto_anual_COSEVI')}}

@@ -8,7 +8,8 @@ select
   serv.servicio,
   serv.precioCita,
   pres.Anio,
-  pres.Presupuesto / count(*) over (partition by pres.Anio) as presupuestoServicio
+  pres.Presupuesto / count(*) over (partition by pres.Anio) as presupuestoServicio,
+  pres.Costo / count(*) over (partition by pres.Anio) AS CostoServicio
 from
   [RAW].serviciosCoseviRAW as serv
 cross join
@@ -17,4 +18,5 @@ group by
   serv.servicio,
   serv.precioCita,
   pres.Anio,
-  pres.Presupuesto
+  pres.Presupuesto,
+  pres.Costo

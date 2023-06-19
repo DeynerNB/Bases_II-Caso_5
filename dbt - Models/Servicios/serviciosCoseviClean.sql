@@ -9,7 +9,8 @@ select
   pServ.servicio as Servicio,
   pServ.precioCita as Precio,
   pServ.anio as Anio,
-  pServ.presupuestoServicio as Costo_Operativo,
+  pServ.presupuestoServicio as Presupuesto,
+  pServ.CostoServicio AS CostoAnual,
   case
     when pServ.servicio in ('Cita para prueba teorica de manejo', 'Cita para prueba practica de manejo', 'Cita para permiso de conducir') then (SELECT link FROM {{ ref('paginasRAW') }} WHERE id = 12493)
     else (SELECT link FROM {{ ref('paginasRAW') }} WHERE id = 251)
