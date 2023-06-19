@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: Services
+    database: BD_PruebaCaso5
+    schema: dbo
+    tables:
+      - name: ServiciosCOSEVI
+      - name: Pages
+      - name: Presupuesto_anual_COSEVI
+
