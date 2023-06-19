@@ -1,6 +1,6 @@
-servicio,tiempo de cita estimada en dias,precio de cita
-Cita para prueba teorica de manejo,70,5000
-Cita para prueba practica de manejo,40,5000
-Cita para permiso de conducir,90,17224
-Cita para licencia por primera vez,80,5800
-Cita para renovacion de licencia,40,12000
+id,servicio,tiempo de cita estimada en dias,precio de cita
+1,Cita para prueba teorica de manejo,70,5000
+2,Cita para prueba practica de manejo,40,5000
+3,Cita para permiso de conducir,90,17224
+4,Cita para licencia por primera vez,80,5800
+5,Cita para renovacion de licencia,40,12000
